@@ -1,4 +1,4 @@
-export function validation(object, response, schema) {
+export function validateBySchema(object, response, schema) {
     const validation = schema.validate(object, { abortEarly: false });
 
     if (validation.error) {

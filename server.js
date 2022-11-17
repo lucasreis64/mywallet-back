@@ -1,7 +1,7 @@
 import express, { json } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import signUpRouter from "./src/routers/sign-up.js";
+import signUpRouter from "./src/routers/authRouters.js";
 dotenv.config();
 
 const app = express();

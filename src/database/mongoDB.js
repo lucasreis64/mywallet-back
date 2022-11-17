@@ -12,6 +12,5 @@ try{
 }
 
 export const db = mongoClient.db('mywallet-api')
-export const clients = db.collection('clients')
-export const bankStatement = db.collection('bank-statement')
+export const accounts = db.collection('accounts')
 export const sessions = db.collection('sessions')

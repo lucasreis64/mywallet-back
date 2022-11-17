@@ -1,4 +1,4 @@
-import { postSignUp } from "../controllers/sign-up/post.js";
+import { postSignUp } from "../controllers/AuthControllers/postSingUp.js";
 import express from "express";
 
 const router = express.Router();
