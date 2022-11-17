@@ -1,4 +1,4 @@
-import { clients } from "../../database/mongoDB";
+import { clients } from "../../database/mongoDB.js";
 import { signUpSchema } from "../../schemas/sign-up-schema.js";
 import { validation } from "../../functions/validation.js";
 import bcrypt from "bcrypt";
