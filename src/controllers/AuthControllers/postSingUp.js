@@ -1,5 +1,5 @@
 import { accounts } from "../../database/mongoDB.js";
-import { signUpSchema } from "../../schemas/signUpSchema.js";
+import { signUpSchema } from "../../models/signUpSchema.js";
 import { validateBySchema } from "../../middlewares/validateBySchema.js";
 import bcrypt from 'bcrypt'
 
@@ -15,6 +15,8 @@ export async function postSignUp(req, res) {
         }
 
         delete newUser.repeatPassword;
+
+        newUser.statement = {}
 
         const passwordHash = bcrypt.hashSync(newUser.password, 10);
 

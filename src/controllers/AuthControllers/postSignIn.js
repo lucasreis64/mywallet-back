@@ -1,7 +1,7 @@
 import { validateBySchema } from "../../middlewares/validateBySchema.js";
 import { v4 as uuidV4 } from "uuid";
 import { accounts, sessions } from "../../database/mongoDB.js";
-import { signInSchema } from "../../schemas/signInSchema.js";
+import { signInSchema } from "../../models/signInSchema.js";
 import bcrypt from "bcrypt"
 
 export async function postSignIn(req, res) {
