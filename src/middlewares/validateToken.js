@@ -12,9 +12,8 @@ export async function validateToken(req, res, next) {
         const session = await sessions.findOne({ token: token });
         const user = await accounts.findOne({ _id: session?.userId });
         delete user.password;
-        console.log(user)
 
-        res.locals.account = user
+        res.locals.account = user;
         next();
     } catch (error) {
         console.error(error);

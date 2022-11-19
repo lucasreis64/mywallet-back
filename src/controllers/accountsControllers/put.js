@@ -1,5 +1,1 @@
-
-
-export async function putAccounts (req, res){
-    
-}
+export async function putAccounts(req, res) {}
