@@ -13,6 +13,6 @@ router.use(validateToken)
 router.get("/", getAccounts)
 router.post("/", postAccounts)
 router.put("/", putAccounts)
-router.delete("/", deleteAccounts)
+router.delete("/:id", deleteAccounts)
 
 export default router

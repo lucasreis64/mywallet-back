@@ -16,7 +16,7 @@ export async function postSignUp(req, res) {
 
         delete newUser.repeatPassword;
 
-        newUser.statement = {debits: [], credits: []}
+        newUser.statement = []
 
         const passwordHash = bcrypt.hashSync(newUser.password, 10);
 
