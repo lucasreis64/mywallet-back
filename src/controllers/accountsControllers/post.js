@@ -8,9 +8,9 @@ export async function postAccounts(req, res) {
     const { statement } = account;
     const id = account._id;
 
-    statement.forEach((d, idx) => (d.id = idx));
-
     if (!validateBySchema(req.body, res, statementsSchema)) return;
+
+    statement.forEach((s, idx) => (s.id = idx));
 
     if (operation === "debits")
         statement.push({ type: "debits", value: value, id: statement.length });

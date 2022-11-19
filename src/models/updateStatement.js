@@ -1,12 +1,12 @@
 import { accounts } from "../database/mongoDB.js";
 
-export async function updateStatement(statement, id, res) {
+export async function updateStatement(stat, id, res) {
     try {
         await accounts.updateOne(
             { _id: id },
             {
                 $set: {
-                    statement: statement,
+                    statement: stat,
                 },
             }
         );

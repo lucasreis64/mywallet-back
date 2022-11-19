@@ -11,6 +11,12 @@ export async function validateToken(req, res, next) {
     try {
         const session = await sessions.findOne({ token: token });
         const user = await accounts.findOne({ _id: session?.userId });
+
+        if(!user){
+            res.status(422).send('invalid token')
+            return
+        }
+
         delete user.password;
 
         res.locals.account = user;

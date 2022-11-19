@@ -11,7 +11,7 @@ router.use(validateToken);
 
 router.get("/", getAccounts);
 router.post("/", postAccounts);
-router.put("/", putAccounts);
+router.put("/:id", putAccounts);
 router.delete("/:id", deleteAccounts);
 
 export default router;
